@@ -122,3 +122,5 @@ compile_commands.json
 !/keyboards/ferris
 !/keyboards/gmmk
 !/keyboards/planck
+
+/keyboards/ferris/sweep/keymaps/test/*

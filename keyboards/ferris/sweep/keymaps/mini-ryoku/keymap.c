@@ -10,15 +10,14 @@
 #include "masks/sweep.h"
 
 enum layer_number {
-  _BASE = 0,
+  _HOME = 0,
   _SYM,
   _FUN,
 };
 
 /* see layout.h for details */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BASE] = LAYOUT_mask(_BASE_LAYOUT),
+  [_HOME] = LAYOUT_mask(_BASE_LAYOUT),
   [_SYM] = LAYOUT_mask(_SYM_LAYOUT),
   [_FUN] = LAYOUT_mask(_FUN_LAYOUT),
 };
-

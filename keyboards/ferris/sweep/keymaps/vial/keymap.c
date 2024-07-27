@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,            KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
     QK_GESC, KC_HOME, KC_PGDN, KC_PGUP, KC_END,          KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_QUOT,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN2,         KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, KC_ENT,
-                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS  
+                                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
   ),
 
   [2] = LAYOUT(
@@ -41,3 +41,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
   ),
 };
+
+// Space saving
+// #ifndef MAGIC_ENABLE
+// uint16_t keycode_config(uint16_t keycode) {
+//     return keycode;
+// }
+// #endif
+
+// #ifndef MAGIC_ENABLE
+// uint8_t mod_config(uint8_t mod) {
+//     return mod;
+// }
+// #endif

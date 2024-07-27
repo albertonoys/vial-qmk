@@ -1,0 +1,6 @@
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+COMBO_ENABLE = yes
+LTO_ENABLE = yes
+QMK_SETTINGS = yes
+MUSIC_ENABLE = no

@@ -1,6 +1,6 @@
 {
     "keyboard_name": "Ferris sweep",
-    "manufacturer": "DPB",
+    "manufacturer": "noys",
     "usb": {
         "vid": "0xC2AB",
         "pid": "0x3939",

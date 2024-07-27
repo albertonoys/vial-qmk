@@ -114,3 +114,11 @@ user_song_list.h
 compile_commands.json
 .clangd/
 .cache/
+
+# Ignore all keyboards
+/keyboards/*
+
+# Don't ignore the keyboards you own
+!/keyboards/ferris
+!/keyboards/gmmk
+!/keyboards/planck

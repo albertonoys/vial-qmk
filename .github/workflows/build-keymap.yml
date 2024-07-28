@@ -15,7 +15,7 @@ on:
         default: 'vial'
 jobs:
   build:
-    uses: .github/workflows/ci-build-major-branch-keymap.yml@vial
+    uses: ./.github/workflows/ci-build-major-branch-keymap.yml@vial
     with:
       branch: ${{ github.ref_name }}
       keymap: noys

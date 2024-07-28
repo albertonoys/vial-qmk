@@ -38,7 +38,7 @@ jobs:
       - name: Generate build matrix
         id: generate_matrix
         run: |
-          matrix=$(qmk find -km ${{ inputs.keymap }} 2>/dev/null | jq -R -s -c 'split("\n")[:-1] | map({keyboard: (split(":")[0]), keymap: "${{ inputs.keymap }}"})' )
+          matrix=$(qmk find -km ${{ inputs.keymap }} 2>/dev/null | jq -R -s -c 'split("\n")[:-1] | map({keyboard: (split(":")[0]), keymap: "${{ inputs.keymap }}", artifact_name: (split(":")[0] | gsub("/"; "_"))})' )
           echo "matrix=${matrix}" >> $GITHUB_OUTPUT
 
   build_firmware:
@@ -79,7 +79,7 @@ jobs:
         uses: actions/upload-artifact@v4
         continue-on-error: true
         with:
-          name: ${{ matrix.keyboard }}_${{ matrix.keymap }}
+          name: ${{ matrix.artifact_name }}_${{ matrix.keymap }}
           path: |
             *.hex
             *.bin

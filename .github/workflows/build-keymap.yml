@@ -3,15 +3,15 @@ name: Build Keymap
 on:
   push:
     branches:
-      - main  # or any branch you want to trigger on
+      - vial
   pull_request:
     branches:
-      - main  # or any branch you want to trigger on
+      - vial
 
 jobs:
   build:
     uses: ./.github/workflows/ci-build-major-branch-keymap.yml
     with:
       branch: ${{ github.ref_name }}
-      keymap: noys  # or whatever keymap you want to build
-      slice_length: '5'  # adjust as needed
+      keymap: noys
+      slice_length: '5'

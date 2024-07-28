@@ -7,7 +7,12 @@ on:
   pull_request:
     branches:
       - vial
-
+  workflow_dispatch:
+    inputs:
+      keymap:
+        description: 'Keymap to build'
+        required: true
+        default: 'vial'
 jobs:
   build:
     uses: .github/workflows/ci-build-major-branch-keymap.yml

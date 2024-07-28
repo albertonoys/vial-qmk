@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/ci-build-major-branch-keymap.yml
+    uses: .github/workflows/ci-build-major-branch-keymap.yml
     with:
       branch: ${{ github.ref_name }}
       keymap: noys

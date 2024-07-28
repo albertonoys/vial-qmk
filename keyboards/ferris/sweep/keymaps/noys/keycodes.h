@@ -15,9 +15,8 @@
 #define MT_DOT LALT_T(KC_DOT)
 #define MT_SLSH RSFT_T(KC_SLSH)
 
-#define LT_TAB LT(_FUN, KC_TAB)
 #define LT_BSPC LT(_FUN, KC_BSPC)
-// #define LT_BSPC LT(_SYM, KC_BSPC)
+#define LT_ENT LT(_FUN, KC_ENT)
 
 /* Sym Layer */
 #define MT_GRV LSFT_T(KC_GRV)
@@ -40,6 +39,6 @@
 #define TO_HOME TO(_HOME)
 
 /* Thumb keys */
-#define L_SEC KC_ENT
+#define L_SEC LT_ENT
 #define L_MAIN LT_BSPC
 #define R_MAIN KC_SPC

@@ -16,10 +16,10 @@
 #define COMBO_SHOULD_TRIGGER
 
 /* Tap Hold Settings */
-// #define TAPPING_FORCE_HOLD
-#define PERMISSIVE_HOLD
-#define QUICK_TAP_TERM 100
-#define TAPPING_TERM 150
+#define TAPPING_FORCE_HOLD
+// #define PERMISSIVE_HOLD
+#define QUICK_TAP_TERM 120
+#define TAPPING_TERM 200
 
 /* Mouse settings (Defaults converted for 144Hz) */
 #define MOUSEKEY_INTERVAL 6

@@ -38,7 +38,7 @@ jobs:
       - name: Generate build matrix
         id: generate_matrix
         run: |
-          matrix=$(qmk find -km ${{ inputs.keymap }} 2>/dev/null | jq -R -s -c 'split("\n")[:-1] | map({keyboard: (split(":")[0]), keymap: "${{ inputs.keymap }}", artifact_name: (split(":")[0] | gsub("/"; "_"))})' )
+          matrix=$(find keyboards -type d -name keymaps -exec find {} -maxdepth 1 -type d -name "${{ inputs.keymap }}" \; | sed 's|keyboards/||g; s|/keymaps/.*||g' | jq -R -s -c 'split("\n")[:-1] | map({keyboard: ., keymap: "${{ inputs.keymap }}", artifact_name: (. | gsub("/"; "_"))})')
           echo "matrix=${matrix}" >> $GITHUB_OUTPUT
 
   build_firmware:

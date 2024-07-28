@@ -109,7 +109,11 @@ jobs:
         continue-on-error: true
         run: |
           export NCPUS=$(( $(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || getconf _NPROCESSORS_ONLN 2>/dev/null) -1 ))
-          qmk mass-compile -t -j $NCPUS -e DUMP_CI_METADATA=yes $(jq -r '.["${{ matrix.target }}"].targets' targets.json) || touch .failed
+          targets=$(jq -r '.["${{ matrix.target }}"].targets' targets.json)
+          for target in $targets; do
+            keyboard=$(echo $target | cut -d':' -f1)
+            make $keyboard:${{ inputs.keymap }} DUMP_CI_METADATA=yes -j $NCPUS || touch .failed
+          done
 
       - name: Upload binaries
         uses: actions/upload-artifact@v4

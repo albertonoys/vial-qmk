@@ -27,10 +27,10 @@ jobs:
       matrix: ${{ steps.generate_matrix.outputs.matrix }}
 
     steps:
-     - name: Install prerequisites
-        run: |
-          apt-get update
-          apt-get install -y jq
+      - name: Install prerequisites
+          run: |
+            apt-get update
+            apt-get install -y jq
       - name: Checkout QMK Firmware
         uses: actions/checkout@v4
 

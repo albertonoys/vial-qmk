@@ -6,14 +6,16 @@
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1, 0, 2, 4 }
 
 /* Select hand configuration */
-// #define MASTER_LEFT
-// #define MASTER_RIGHT
 #define EE_HANDS
 
 /* Combo Settings */
+#define VIAL_COMBO_ENTRIES 8
 #define COMBO_TERM 25
 #define COMBO_ONLY_FROM_LAYER 0
 #define COMBO_SHOULD_TRIGGER
+
+/* Layers */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 8
 
 /* Tap Hold Settings */
 #define TAPPING_FORCE_HOLD
